@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block scripts %}
+    {% endblock %}
+    {% block style %}
+    <link rel="stylesheet" href="{% static 'styles/note_list.css' %}">
+    {% endblock %}
+    <title>{% block title %}{{ user.first_name }} {{ user.last_name }}{% endblock %}</title>
+</head>
+<body>
+    {% block content %}
+    {% for memory in memories %}
+    <div class="col-lg-3">
+        <div class="note-card">
+           
+        </div>
+    </div>
+    {% endfor %}
+
+    {% endblock %}
+</body>
+</html>

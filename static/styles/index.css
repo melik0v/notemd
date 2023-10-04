@@ -1,0 +1,40 @@
+body {
+    background-color: green;
+}
+
+a {
+    text-decoration: none;
+    align-items: center;
+}
+
+.title {
+    display: flex;
+    text-transform: uppercase;
+    margin: 0 auto;
+    font-size: 10rem;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.dark-part {
+    color: #121212;
+}
+
+.light-part {
+    color: #ccc
+}
+
+.btn {
+    align-items: center;
+    justify-content: center;
+    min-width: 20rem;
+    min-height: 3rem;
+    border: 1px solid #fff;
+    margin: 0.5rem auto;
+    display: flex;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    text-align: center;
+    gap: 1rem;
+    border-radius: 7px;
+    padding: 0.5rem;
+}
