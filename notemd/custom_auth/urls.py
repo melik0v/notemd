@@ -3,6 +3,6 @@ from custom_auth.views import index
 
 
 urlpatterns = [
-    path('', index),
+    path('', index, name='login'),
     path('', include('social_django.urls', namespace='social')),
 ]

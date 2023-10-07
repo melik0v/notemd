@@ -16,14 +16,23 @@
 </head>
 <body>
     {% block content %}
-    {% for memory in memories %}
+    {% for note in notes %}
     <div class="col-lg-3">
         <div class="note-card">
-           
+            <span class="title">
+                {{ note.title }}
+            </span>
         </div>
     </div>
     {% endfor %}
-
+    <div class="col-lg-3">
+        <a href="{% url 'notes:create' %}">
+            <button class="note-card btn new-note-btn btn-outline-primary">
+                +
+            </button>
+        </a>
+    </div>
+    
     {% endblock %}
 </body>
 </html>

@@ -17,11 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth.views import LogoutView
-from custom_auth.views import index
+from django.contrib.auth.decorators import login_required
+from notemd.settings import LOGOUT_REDIRECT_URL
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('notes/', include(('main.urls', 'notes'), namespace='notes')),
-    path('logout/', LogoutView.as_view(template_name='auth/index.html'), name='logout'),
+    path('logout/', login_required(LogoutView.as_view(template_name='auth/index.html'), login_url=LOGOUT_REDIRECT_URL), name='logout'),
     path('', include('custom_auth.urls')),
 ]

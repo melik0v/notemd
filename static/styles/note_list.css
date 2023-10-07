@@ -1,0 +1,31 @@
+.note-card {
+    display: flex;
+    align-items: center;
+    
+    min-height: 10rem;
+    min-width: 10rem;
+
+    max-height: 10rem;
+    max-width: 20rem;
+
+    font-size: 2rem;
+
+    background-color: #ccc;
+    border: 1px solid red;
+
+
+
+}
+
+.title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.new-note-btn {
+    justify-content: center;
+    background-color: transparent;
+    font-family: 'Montserrat';
+    font-size: 10rem;
+}
