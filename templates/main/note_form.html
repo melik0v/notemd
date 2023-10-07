@@ -44,11 +44,20 @@
       {% csrf_token %}
       <div class="form-error">{{ form.errors.place }}</div>
       <div class="form">
-        {% for field in form %}
+        {{ form.media }}
+        {{ form }}
+        <!-- {% for field in form %}
           {{field}}
         {% endfor %}
-      </div>
+      </div> -->
     </form>
+    <!-- <form method = "post" action = "./">
+        {% csrf_token %}
+        {{ form.media }}
+        {{ form.as_p }}
+        <p> <input type = "submit" value = "post"> </ p>
+    </form> -->
+
   {% endblock %}
 </body>
 </html>
